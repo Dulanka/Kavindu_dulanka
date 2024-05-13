@@ -1,0 +1,637 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: sans-serif; 
+  background-color: #000000; 
+}
+
+a {
+  text-decoration: none; 
+  color: inherit; 
+}
+
+
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 14px; 
+  }
+}
+
+
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #171717;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.navbar .logo img {
+  width: 80px;
+}
+
+.navbar .menu {
+  list-style-type: none;
+  display: flex;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .menu li {
+  margin-right: 20px;
+}
+
+.navbar .menu li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .menu li a:hover {
+  background-color: #FF8412;
+  color: #ffffff;
+}
+
+.cv-button a {
+  color: #000000;
+  background-color: #FF8412;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Michroma", sans-serif;
+  font-weight: bold;
+}
+
+.cv-button a:hover {
+  background-color: #FF8412;
+  color: #ffffff;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
+      margin-top: 20px;
+  }
+
+  .navbar .menu {
+      margin-top: 10px;
+  }
+
+  .navbar .menu li {
+      margin-right: 15px;
+  }
+
+  .cv-button {
+      margin-top: 10px;
+  }
+}
+
+
+/* Content section styles */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; 
+  padding: 20px; 
+  background-size: cover;
+  background-color: #000000;
+}
+
+.left-section {
+  text-align: center;
+  margin-bottom: 40px; 
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.left-section h1 {
+  font-size: 70px; 
+  line-height: 1.2; 
+  color: #ffffff;
+  margin-bottom: 10px; 
+  font-family: "Michroma", sans-serif;
+}
+
+.left-section .btn {
+  border: 3px solid #FF8412;
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px; 
+  font-size: 14px; 
+  cursor: pointer;
+  font-family: "Michroma", sans-serif;
+  border-radius: 8px; 
+  margin-top: 10px; 
+}
+
+.left-section .btn:hover {
+  background-color: #FF8412; 
+}
+
+.right-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.right-section img {
+  animation: roll 15s linear infinite;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .left-section h1 {
+      font-size: 24px; 
+  }
+
+  .left-section .btn {
+      padding: 8px 16px; 
+      font-size: 12px; 
+      border-radius: 6px; 
+      margin-top: 8px; 
+  }
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+  border: 3px solid #FF8412;
+  background-color: #171717;
+  padding: 20px; 
+  max-width: 1280px; 
+  width: 100%; 
+  margin: 0 auto; 
+}
+
+
+
+.left-section {
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; 
+}
+
+.box {
+  background-color: #00000000;
+  padding: 20px; 
+  margin-top: 20px; 
+}
+
+.box .text {
+  font-family: 'Ubuntu', sans-serif;
+  color: #ffffff;
+  font-size: 14px; 
+  margin-bottom: 10px; 
+}
+
+.box .text.name {
+  font-size: 20px; 
+  font-weight: bold;
+  margin-bottom: 10px; 
+}
+
+#name {
+  font-size: 32px; 
+  font-weight: bold;
+  margin-bottom: 10px; 
+  font-family: "Michroma", sans-serif;
+}
+
+#inf {
+  font-size: 16px; 
+  line-height: 1.5;
+  font-family: 'Ubuntu', sans-serif;
+  color: #FF8412;
+}
+
+#profession {
+  font-size: 12px; 
+  margin-bottom: 10px; 
+}
+
+#info {
+  font-size: 14px; 
+  line-height: 1.5;
+  color: #9b9b9b;
+}
+
+/* For desktop view */
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left-section {
+    margin-right: 20px; 
+  }
+
+  .right-section {
+    margin-left: 20px; /
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-20px); /
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px); 
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+.leftt-section {
+  flex: 1; 
+}
+
+.leftt-section h2 {
+  text-align: center; 
+  margin-top: 70px; 
+  font-size: 50px; 
+  color: #ffffff; 
+  font-family: "Michroma", sans-serif;
+  margin-bottom: 70px; 
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .leftt-section h2 {
+      font-size: 40px; 
+      margin-top: 50px; 
+      margin-bottom: 50px; 
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .leftt-section h2 {
+      font-size: 30px; 
+      margin-top: 30px; 
+      margin-bottom: 30px; 
+  }
+}
+
+
+
+
+
+
+
+/* Your existing CSS styles */
+/* Original CSS */
+
+.contentt {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 70px;
+  margin-right: 300px;
+  margin-left: 300px;
+}
+
+.portfolio-card {
+  width: 305px;
+  height: 501px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border: 3px solid #FF8412;
+  background-color: #171717;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  margin-top: 40px;
+}
+
+.portfolio-card-image img {
+  width: 112px;
+  height: 112px;
+  display: block;
+}
+
+.portfolio-card-details {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.portfolio-card-details h2 {
+  margin-top: 0px;
+  font-family: "Michroma", sans-serif;
+  font-size: 30px;
+}
+
+.portfolio-card-details p {
+  margin-top: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+
+/* Responsive CSS */
+
+@media screen and (max-width: 1200px) {
+  .contentt {
+      margin-right: 150px;
+      margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contentt {
+      margin-right: 100px;
+      margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contentt {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: 50px;
+      margin-left: 50px;
+  }
+
+  .portfolio-card {
+      width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .contentt {
+      margin-right: 20px;
+      margin-left: 20px;
+  }
+
+  .portfolio-card {
+      width: calc(100% - 20px);
+  }
+}
+
+
+
+
+
+/* Skill bar */
+.container3 {
+  width: 90%; 
+  max-width: 1280px; 
+  margin: 20px auto; 
+}
+.skill {
+  margin-bottom: 1%; 
+}
+.skill-name {
+  margin-bottom: 1%; 
+  font-family: "Michroma", sans-serif;
+  font-size: 20px; 
+  color: #ffffff;
+}
+.skill-bar {
+  width: 100%; 
+  height: 20px; 
+  background-color: #ccc; 
+  position: relative; 
+  overflow: hidden;
+  border-radius: 1vw; 
+}
+.skill-progress {
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  left: -100%; 
+  animation: progressAnimation 2s ease forwards; 
+}
+.skill-percentage {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 1.5vw; 
+}
+
+/* Skill bar colors */
+.html .skill-progress {
+  background-color: #FF8412; 
+}
+.css .skill-progress {
+  background-color: #264DE4; 
+}
+.figma .skill-progress {
+  background-color: #FF8412; 
+}
+.java .skill-progress {
+  background-color: #264DE4; 
+}
+
+/* Animation */
+@keyframes progressAnimation {
+  to {
+    left: 0; 
+  }
+}
+
+
+
+
+
+
+
+
+
+/* comment cards */
+.container4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.card {
+  width: 300px;
+  height: auto;
+  background-color: #000000;
+  margin: 0 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease; 
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+.container6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70PX;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 30px;
+  background-color: #ffffff00; 
+  color: #ffffff; 
+  border: 3px solid #FF8412;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  font-family: "Michroma", sans-serif;
+}
+
+
+.arrow {
+  margin-left: 5px;
+  animation: arrowAnimation 1s infinite; 
+}
+
+@keyframes arrowAnimation {
+  0% { margin-left: 5px; }
+  50% { margin-left: 10px; }
+  100% { margin-left: 5px; }
+}
+
+
+
+
+
+
+
+.footer{
+  background:#171717;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  margin-top: 70PX;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:rgb(255, 255, 255);
+  font-size:0.8em;
+  font-family: "Michroma", sans-serif;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:#FF8412;
+  transition:0.5s;
+  font-family: "Michroma", sans-serif;
+  font-size: 16PX;
+  }
+  
+  .footer .row a:hover{
+  color:#ffffff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+
+
+
+
+
+
+
+
+
+
+
