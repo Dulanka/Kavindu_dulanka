@@ -300,7 +300,87 @@ b {
 
 
 
+.container4 {
+  margin-top: 50px;
+  padding: 20px;
+  margin: 0 auto; /* Center the container */
+  text-align: left; /* Align the heading to the left */
+  margin-left: 250px; /* Adjust the left margin */
+}
 
+h3 {
+  font-size: 30px; /* Match your heading font size */
+  color: #ffffff; /* Match your heading color */
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-family: "Michroma", sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 20px; /* Match your list item font size */
+  color: #ffffff; /* Match your list item color */
+  margin-top: 20px;
+  position: relative;
+}
+
+.orange-bullet:before {
+  content: '';
+  width: 8px; /* Adjust the size of the bullet */
+  height: 8px; /* Adjust the size of the bullet */
+  background-color: #FF8412; /* Orange color for the bullet */
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: -20px; /* Adjust the distance of the bullet from the text */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+b {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #FF8412; /* Match your button background color */
+  color: #ffffff; /* Match your button text color */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container4 a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* Transparent text */
+  border: 2px solid #FF8412; /* Orange border */
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px; /* Adjust top margin */
+  cursor: pointer;
+  font-family: "Michroma", sans-serif;
+  transition: color 0.3s; /* Smooth transition for text color change */
+}
+
+.container4 a:hover {
+  color: #ffffff; /* White text on hover */
+  background-color: #FF8412; /* Orange background on hover */
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .container4 {
+      margin-left: 0; /* Reset left margin for smaller screens */
+      text-align: center; /* Center text content */
+  }
+
+  ul li {
+      text-align: center; /* Center list items */
+  }
+}
 
 
 
