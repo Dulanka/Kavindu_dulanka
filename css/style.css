@@ -625,43 +625,45 @@ body {
 
 
 
-/* button */
-.container6 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70PX;
+
+@keyframes policeLight {
+  0% {
+    background-color: #FF8412; 
+    transform: translateY(-5px); 
+  }
+  50% {
+    background-color: #000000; 
+    transform: translateY(5px); 
+  }
+  100% {
+    background-color: #FF8412; 
+    transform: translateY(-5px); 
+  }
 }
 
-.btn {
-  padding: 10px 20px;
-  font-size: 30px;
-  background-color: #ffffff00;
-  color: #ffffff;
+/* Style for container6 */
+.container6 {
+  text-align: center; 
+  margin-top: 30px; 
+  margin-top: 70px;
+}
+
+* 
+.btnn {
+  display: inline-block;
+  padding: 30px 80px;
+  color: #fff;
   border: 3px solid #FF8412;
+  text-decoration: none;
   border-radius: 20px;
-  cursor: pointer;
-  position: relative;
+  animation: policeLight 2s ease infinite; 
+  font-size: 25px;
   font-family: "Michroma", sans-serif;
 }
 
+/* Style for arrow */
 .arrow {
-  margin-left: 5px;
-  animation: arrowAnimation 1s infinite;
-}
-
-@keyframes arrowAnimation {
-  0% {
-    margin-left: 5px;
-  }
-
-  50% {
-    margin-left: 10px;
-  }
-
-  100% {
-    margin-left: 5px;
-  }
+  margin-left: 5px; 
 }
 
 .footer {
