@@ -141,8 +141,23 @@
 }
 
 .right-photo img {
-    width: 600px; 
-    height: auto;
+  width: 100%;
+  max-width: 600px;  
+  height: auto;
+  display: block;  
+  margin: 0 auto;  
+}
+
+
+.right-photo {
+  padding: 15px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .right-photo img {
+      max-width: 100%;  
+  }
 }
 
 .left-details,
