@@ -447,6 +447,22 @@ body {
       margin: 0% 3%;
     }
   }
-  
+  .learn-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #FF8412;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.learn-more-btn:hover {
+  background-color: #1e6ac0;
+}
   
   
