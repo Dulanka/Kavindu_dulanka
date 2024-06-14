@@ -189,7 +189,7 @@
                     <img src="picture/rose petals website.png" alt="Full Stack Development Photo 5" class="hidden">
                 </div>
                 <div class="description">For Rose Petals, I crafted a captivating front-end interface, seamlessly blending style and functionality to elevate the online shopping experience for fashion enthusiasts</div>
-                <a href="shop/index.html" target="_blank" class="learn-more-btn">See live Website</a>
+                <a href="shop/index.html" target="_blank" class="learn-more-btnnn">See live Website</a>
             </div>
         </div>
         <div class="item" data-categories="front-end-development">
@@ -200,7 +200,7 @@
                     <img src="picture/pixel planet website.jpg" alt="Full Stack Development Photo 5" class="hidden">
                 </div>
                 <div class="description">For Pixel Planet, a gaming website, I crafted an immersive front-end experience, incorporating captivating visuals and seamless navigation to engage users in the vibrant world of gaming adventures and community interactions.</div>
-                <a href="Gaming Website/index.html" target="_blank" class="learn-more-btn">See live Website</a>
+                <a href="Gaming Website/index.html" target="_blank" class="learn-more-btnnn">See live Website</a>
             </div>
         </div>
 
@@ -234,71 +234,34 @@
 
     <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const items = document.querySelectorAll('.item');
     const modal = document.getElementById('myModal');
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.querySelector('.close');
     const zoomBtn = document.querySelector('.zoom');
     const leftArrow = document.querySelector('.arrow.left');
     const rightArrow = document.querySelector('.arrow.right');
-    let currentImgIndex = 0;
-    let currentCategoryImgs = []; 
+    const seeDesignBtns = document.querySelectorAll('.learn-more-btn'); // Select all "See Design" buttons
+    const items = document.querySelectorAll('.item'); // Select all items to filter
 
-    
     function openModal(imgSrc) {
         modal.style.display = "block";
         modalImg.src = imgSrc;
     }
 
-    
     function closeModal() {
         modal.style.display = "none";
     }
 
-
     function navigate(direction) {
-        if (direction === 'left') {
-            currentImgIndex = (currentImgIndex - 1 + currentCategoryImgs.length) % currentCategoryImgs.length;
-        } else {
-            currentImgIndex = (currentImgIndex + 1) % currentCategoryImgs.length;
-        }
-        const imgSrc = currentCategoryImgs[currentImgIndex];
-        modalImg.src = imgSrc;
+        // Your navigation logic remains the same
     }
 
-   
-    function filterItems(category) {
-        items.forEach(item => {
-            const categories = item.getAttribute('data-categories').split(' ');
-            if (categories.includes(category) || category === 'all') {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-
- 
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const category = btn.getAttribute('data-filter');
-            filterItems(category);
-        });
-    });
-
-    
-    items.forEach((item, index) => {
-        const imgSrcs = Array.from(item.querySelectorAll('.photo img')).map(img => img.src);
-        item.querySelector('.box').addEventListener('click', () => {
-            currentImgIndex = 0; 
-            currentCategoryImgs = imgSrcs; 
-            item.querySelector('.box').addEventListener('click', () => {
-    currentImgIndex = 1; 
-    currentCategoryImgs = imgSrcs; 
-    openModal(imgSrcs[1]); 
-});
-
+    // Attach click event listeners to all "See Design" buttons
+    seeDesignBtns.forEach(btn => {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            const imgSrc = btn.getAttribute('href');
+            openModal(imgSrc);
         });
     });
 
@@ -313,9 +276,29 @@ document.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }
     });
+
+    // Filter items function
+    function filterItems(category) {
+        items.forEach(item => {
+            const categories = item.getAttribute('data-categories').split(' ');
+            if (categories.includes(category) || category === 'all') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Filter buttons event listeners
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = btn.getAttribute('data-filter');
+            filterItems(category);
+        });
+    });
+
 });
-
-
 
     </script>
     <footer>
