@@ -278,7 +278,16 @@
     </div>
     </div>
     </footer> 
-      
+    <script>
+        document.querySelectorAll('.like-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const counter = this.nextElementSibling;
+        let count = parseInt(counter.textContent);
+        counter.textContent = count + 1;
+    });
+});
+
+</script>   
         
 </body>
 </html>
