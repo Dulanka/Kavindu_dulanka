@@ -816,3 +816,82 @@ body {
   }
 }
 
+
+
+
+
+.containerx {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 40px; 
+}
+
+.boxz {
+  position: relative; 
+  width: calc(35% - 20px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  background-color: #fff; 
+  border-radius: 10px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  border: 3px solid #FF8412;
+}
+
+.boxz img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; 
+  transition: transform 0.3s ease; 
+}
+
+.boxz:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.boxz:hover img {
+  transform: scale(1.1); 
+}
+
+.like-section {
+  position: absolute;
+  bottom: 10px; 
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.like-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease; 
+}
+
+.like-btn:hover {
+  transform: scale(1.2); 
+}
+
+.like-btn svg {
+  fill: #ff4757; 
+  width: 24px;
+  height: 24px;
+}
+
+.like-counter {
+  font-size: 16px;
+  color: #333; 
+}
+
+@media (max-width: 768px) {
+  .boxz {
+      width: calc(100% - 20px); 
+  }
+}
