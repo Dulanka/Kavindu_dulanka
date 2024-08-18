@@ -541,7 +541,7 @@ body {
   flex-basis: calc(33.333% - 30px);
   margin: 0 15px 30px;
   overflow: hidden;
-  border-radius: 9px;
+  border-radius: 0px;
 }
 
 .ag-courses-item_link {
