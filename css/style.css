@@ -834,9 +834,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   overflow: hidden;
   background-color: #fff; 
-  border-radius: 10px; 
+  border-radius: 0px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  border: 3px solid #FF8412;
+  
 }
 
 .boxz img {
